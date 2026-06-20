@@ -5,18 +5,10 @@ Thumbs.db
 # IDE
 .idea/
 .vscode/
+.tmp/
 *.iml
-
-# Node / Frontend
-node_modules/
-dist/
-.vite/
-
-# Java / Backend
-.gradle/
-build/
-out/
-target/
+*.iws
+*.ipr
 
 # Logs
 *.log
@@ -25,10 +17,23 @@ target/
 .env
 .env.*
 !.env.example
-application-local.yml
-application-local.yaml
 
-# Local database / cache
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+
+# Backend
+backend/.gradle/
+backend/build/
+backend/out/
+backend/target/
+caches/
+daemon/
+native/
+wrapper/
+
+# Local databases and caches
 *.db
 *.sqlite
 *.sqlite3
