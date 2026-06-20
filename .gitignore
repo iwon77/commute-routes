@@ -1,0 +1,34 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# Node / Frontend
+node_modules/
+dist/
+.vite/
+
+# Java / Backend
+.gradle/
+build/
+out/
+target/
+
+# Logs
+*.log
+
+# Environment
+.env
+.env.*
+!.env.example
+application-local.yml
+application-local.yaml
+
+# Local database / cache
+*.db
+*.sqlite
+*.sqlite3
