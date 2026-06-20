@@ -1,0 +1,15 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: commute-routes-postgres
+    ports:
+      - '5432:5432'
+    environment:
+      POSTGRES_DB: commute_routes
+      POSTGRES_USER: commute_routes
+      POSTGRES_PASSWORD: commute_routes
+    volumes:
+      - commute-routes-postgres-data:/var/lib/postgresql/data
+
+volumes:
+  commute-routes-postgres-data:

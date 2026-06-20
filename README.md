@@ -23,6 +23,8 @@
 .
 ├─ AGENTS.md
 ├─ archive/
+├─ backend/
+├─ frontend/
 ├─ README.md
 ├─ .gitattributes
 └─ .gitignore
@@ -38,7 +40,60 @@
 - `archive/`는 큰 기술 결정, 구조 변경 이유, 이슈/설계/검증 중 다시 참고해야 할 핵심 내용만 선택적으로 기록한다.
 - 일반 진행 로그나 세션 대화 원문은 기본적으로 저장하지 않는다.
 
+## 개발 환경
+
+- `frontend/`
+  - `React`
+  - `TypeScript`
+  - `Vite`
+  - `Dexie`
+  - `React Router`
+- `backend/`
+  - `Java 17`
+  - `Spring Boot`
+  - `Spring Web`
+  - `JdbcTemplate`
+  - `PostgreSQL`
+
+## 로컬 실행
+
+### 1. PostgreSQL 실행
+
+```bash
+cd backend
+docker compose up -d
+```
+
+### 2. 백엔드 실행
+
+```bash
+cd backend
+./gradlew bootRun
+```
+
+기본 주소:
+
+- `http://localhost:8080`
+- 헬스 체크: `http://localhost:8080/api/v1/health`
+
+### 3. 프론트 실행
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+기본 주소:
+
+- `http://localhost:5173`
+
+## 환경 변수 예시
+
+- 프론트: [frontend/.env.example](frontend/.env.example)
+- 백엔드: [backend/.env.example](backend/.env.example)
+
 ## 상태
 
-- 현재는 기본 브랜치 생성과 초기 환경 구성을 준비하는 단계다.
-- 실제 프론트엔드/백엔드 부트스트랩은 별도 작업 브랜치에서 진행한다.
+- 현재는 MVP 개발을 위한 초기 환경 구성을 진행 중이다.
+- 실제 기능 구현은 환경 세팅 이후 이슈 단위로 이어서 진행한다.
